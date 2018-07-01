@@ -26,8 +26,8 @@ if [ $machine == "Mac" ]; then
 fi
 
 # copy files to home directory with correct name
-for i in $(ls _*); do
-    cp $DIR/$i $HOME/$(sed -e 's/^_/./g' <<< $i)
+for i in $(ls $DIR/_*); do
+    cp $i $HOME/$(sed -e 's/^_/./g' <(basename $i))
 done
 
 # setup .ssh
