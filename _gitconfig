@@ -1,0 +1,47 @@
+# vi: ft=gitconfig
+[user]
+# Please adapt and uncomment the following lines:
+    name = Milo Hartsoe
+    email = hartsoe@umich.edu
+[credential]
+    helper = osxkeychain
+[alias]
+    graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold blue)- %an%C(reset)%C(bold green)%d%C(reset)' --all
+    logdoga = log --decorate --oneline --graph --all
+    s = status
+    d = diff
+    # Add remote on github
+    ra = "!f() { \
+        git remote add $1 https://github.com/$2.git; \
+        }; f"
+    # Sorted diff (Order doesn't matter)
+    sortdiff = !sh -c 'git diff "$@" | grep "^[+-]" | sort --key=1.2 | uniq -u -s1'
+[core]
+  editor = vim
+  # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+  whitespace = space-before-tab,indent-with-non-tab,trailing-space
+[grep]
+  extendRegexp = true
+  lineNumber = true
+[push]
+  default = simple
+[color]
+  ui = auto
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow black
+  local = yellow
+  remote = magenta
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red reverse
+  new = green reverse
+  whitespace = white reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan reverse
+  branch = magenta

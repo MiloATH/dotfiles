@@ -1,0 +1,22 @@
+Host *
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+
+Host oncampus
+   HostName oncampus-course.engin.umich.edu
+   User hartsoe
+
+Host hartsoe
+    HostName login.engin.umich.edu
+    User hartsoe
+    Compression yes
+
+Host gitlab
+   HostName gitlab.eecs.umich.edu
+   User git
+   IdentityFile ~/.ssh/gitlab_rsa
+
+Host github.com
+   Hostname github.com
+   User git
+   IdentityFile ~/.ssh/github_rsa
