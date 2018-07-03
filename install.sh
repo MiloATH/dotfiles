@@ -27,7 +27,14 @@ fi
 
 # copy files to home directory with correct name
 for i in $(ls $DIR/_*); do
-    cp $i $HOME/$(sed -e 's/^_/./g' <(basename $i))
+    file=$(sed -e 's/^_/./g' <(basename $i))
+    # Move current copy to ~/.config_backup
+    if [ -f $file ]; then
+        mkdir -p $HOME/.config_backup
+        mv $file $HOME/.config_backup/$file
+    fi
+    # Copy new config
+    cp $i $HOME/$file
 done
 
 # setup .ssh
