@@ -1,1 +1,5 @@
 brew "terminal-notifier"
+brew "tmux"
+brew "wget"
+brew "node"
+brew "python3"
