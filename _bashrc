@@ -94,5 +94,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ "$machine" == "Linux" ]; then
+    # pbcopy for linux
+    alias pbcopy='xsel --clipboard --input'
+fi
+
+shrug() {
+    echo "¯\_(ツ)_/¯ 🤷" | pbcopy
+    echo "¯\_(ツ)_/¯ 🤷  was copied to clipboard"
+}
+
 export JAVA_HOME=$(/usr/libexec/java_home)
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
