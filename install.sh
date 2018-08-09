@@ -29,9 +29,9 @@ fi
 for i in $(ls $DIR/_*); do
     file=$(sed -e 's/^_/./g' <(basename $i))
     # Move current copy to ~/.config_backup
-    if [ -f $file ]; then
+    if [ -f $HOME/$file ]; then
         mkdir -p $HOME/.config_backup
-        mv $file $HOME/.config_backup/$file
+        mv $HOME/$file $HOME/.config_backup/$file
     fi
     # Copy new config
     cp $i $HOME/$file
