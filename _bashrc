@@ -104,6 +104,9 @@ shrug() {
     echo "¯\_(ツ)_/¯ 🤷  was copied to clipboard"
 }
 
+# Set editor to vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
