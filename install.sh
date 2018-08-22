@@ -37,6 +37,8 @@ for i in $(ls $DIR/_*); do
     cp $i $HOME/$file
 done
 
+source $HOME/.bashrc
+
 # setup .ssh
 # mkdir -p $HOME/.ssh
 # cp $DIR/ssh_config $HOME/.ssh/config
