@@ -23,6 +23,8 @@ if [ $machine == "Mac" ]; then
     fi
     # Use brew to install
     brew bundle --file=$DIR/Brewfile
+    # Run macos.sh
+    exec $DIR/macos.sh
 fi
 
 # copy files to home directory with correct name

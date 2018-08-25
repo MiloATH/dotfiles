@@ -194,3 +194,4 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 killall Dock
 killall Finder
+echo "Done adding macos configs."
