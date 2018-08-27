@@ -31,7 +31,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Set dark theme
-sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
+osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
 
 # Set minimal autohide/show delay for hidden dock
 defaults write com.apple.dock autohide-delay -float 0
