@@ -11,7 +11,7 @@ Host hartsoe
     User hartsoe
     Compression yes
 
-Host gitlab
+Host gitlab.eecs.umich.edu
    HostName gitlab.eecs.umich.edu
    User git
    IdentityFile ~/.ssh/gitlab_rsa
