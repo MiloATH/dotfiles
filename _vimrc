@@ -72,6 +72,9 @@ set clipboard=unnamed
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
+" Set line numbers
+set number
+
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
 set langmenu=en
