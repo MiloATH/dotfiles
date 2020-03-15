@@ -3,6 +3,7 @@
 # Please adapt and uncomment the following lines:
     name = Milo Hartsoe
     email = hartsoe@umich.edu
+	signingkey = 8FE5D9D2C4F54BF9
 [credential]
     helper = osxkeychain
 [alias]
@@ -36,3 +37,7 @@
 	insteadOf = https://gitlab.com/
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[commit]
+	gpgsign = true
+[pull]
+	rebase = true
